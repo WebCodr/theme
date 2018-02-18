@@ -8,6 +8,8 @@
         {{ range ( .Paginate (where .Data.Pages "Type" "post") ).Pages }}
             {{ partial "post.html" . }}
         {{ end }}
+        
+        {{ partial "pagination.html" . }}
     </main>
 </div>
 {{ partial "footer.html" . }}
